@@ -162,6 +162,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  align-items: stretch;
 }
 
 .work-card {
@@ -172,6 +173,7 @@ a {
   font-size: 20px;
   text-align: center;
   transition: all 0.3s ease;
+  min-height: 260px;
 }
 
 .work-card:hover {
@@ -792,4 +794,15 @@ footer h4 {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-card {
+    min-height: auto;
+  }
+}
+
 
