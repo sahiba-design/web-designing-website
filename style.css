@@ -9,9 +9,10 @@ body {
   background: #0a1226;
   color: #ffffff;
   padding-top: 90px;
+  
 }
 
-/* ================= COMMON ================= */
+/*  COMMON */
 
 .container {
   max-width: 1200px;
@@ -23,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-/* ===== HEADER / NAVBAR ===== */
+/*  HEADER / NAVBAR  */
 
 .main-header {
   position: fixed;
@@ -35,12 +36,14 @@ a {
 }
 
 .nav-container {
+  
   max-width: 1200px;
   margin: auto;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 /* Logo */
@@ -100,12 +103,7 @@ a {
   }
 }
 
-
-
-
-
-
-/* ================= HERO ================= */
+/*  HERO  */
 
 .hero {
   min-height: 100vh;
@@ -367,7 +365,6 @@ footer h4 {
     padding: 40px 25px;
   }
 }
-
 
 
 /* =========================
@@ -779,30 +776,156 @@ footer h4 {
   align-items: center;
 }
 
-.work-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.work-card {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-@media (max-width: 900px) {
-  .work-grid {
+@media (max-width:900px) {
+  .work-grid{
     grid-template-columns: 1fr;
   }
 
-  .work-card {
+  .work-card{
     min-height: auto;
   }
 }
 
 
+
+/* ================================
+   GLOBAL OVERFLOW FIX (MOBILE)
+================================ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+ /*  NAVBAR FIX */
+ 
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 16px 20px; 
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+ /*  FOOTER FIX */
+ 
+@media (max-width: 768px) {
+
+  footer {
+    overflow-x: hidden;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+}
+
+
+ /*  WORK SECTION PADDING FIX */
+
+@media (max-width: 768px) {
+  .work {
+    padding: 70px 20px;
+  }
+}
+
+
+ /*  NAVBAR LOGO POSITION FIX */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    flex-wrap: nowrap;   
+  }
+
+  .logo {
+    flex-shrink: 0;      
+  }
+
+  .nav-links {
+    flex-wrap: wrap;     
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    padding: 16px 20px;     
+  }
+
+  .logo img {
+    height: 48px;           
+  }
+
+  .nav-links {
+    flex-wrap: nowrap;     
+    gap: 18px;              
+  }
+
+  .nav-links a {
+    font-size: 14px;       
+    white-space: nowrap;   
+  }
+}
+
+
+@media (max-width: 480px) {
+  .nav-container {
+    flex-wrap: nowrap;       
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    height: 40px;           
+  }
+
+  .nav-links {
+    gap: 10px;             
+    font-size: 14px;        
+  }
+}
+
+/* Footer responsive fix */
+
+.footer-grid {
+  display: flex;           
+  justify-content: space-between; 
+  flex-wrap: nowrap;       
+  gap: 40px;
+
+/* Small screens adjust text size and spacing */
+
+@media (max-width: 768px) {
+  .footer-grid {
+    gap: 20px;             
+  }
+
+  .footer-grid > div {
+    flex: 1;               
+    min-width: 0;          
+  }
+
+  footer p, footer a {
+    font-size: 13px;       
+  }
+}
+
+@media (max-width: 768px) {
+  footer p, footer a {
+    font-size: 12px; 
+  }
+
+  .copyright {
+    font-size: 11px; 
+  }
+
+}
