@@ -929,3 +929,119 @@ html, body {
   }
 
 }
+
+}
+
+
+/* =========================
+   FINAL FOOTER FIX
+========================= */
+
+footer {
+  background: #080f24;
+  padding: 80px 0 40px;
+  overflow-x: hidden;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;
+  padding: 0 40px;
+}
+
+.footer-grid > div {
+  flex: 1;
+  min-width: 0;   /* MOST IMPORTANT: text cut hone se bachata hai */
+}
+
+footer p,
+footer a {
+  color: #7c86d4;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+footer h4 {
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+/* =========================
+   MOBILE FOOTER FIX
+========================= */
+
+@media (max-width: 768px) {
+  .footer-grid {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    gap: 16px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 11px;
+  }
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 11px;
+  color: #7c86d4;
+}
+
+
+/* Footer logo size fix */
+
+footer .footer-logo {
+  height: 40px;   /* pehle 60px tha */
+  width: auto;
+}
+
+/* Mobile me aur chota */
+
+@media (max-width: 768px) {
+  footer .footer-logo {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .footer-logo {
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* left side text (Let’s Talk wala) */
+  .contact-info h2 {
+    font-size: 20px;
+  }
+
+  .contact-info p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* form inputs & textarea */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+}
+
