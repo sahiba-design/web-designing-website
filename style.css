@@ -1045,3 +1045,22 @@ footer .footer-logo {
 
 }
 
+/* ===== CONTACT PAGE MOBILE  FIX  ===== */
+@media (max-width: 768px) {
+  .contact-page .contact-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+
+  .contact-page .contact-info {
+    width: 100% !important;
+    margin-bottom: 24px;
+  }
+
+  .contact-page .contact-form {
+    width: 100% !important;
+  }
+}
+
+
